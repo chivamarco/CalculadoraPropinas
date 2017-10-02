@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     public String getTimeStamp(){
         timeStamp = System.currentTimeMillis();
-        sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
+        sdf = new SimpleDateFormat("MMM dd, HH:mm");
         fecha = new Date(timeStamp);
         return sdf.format(fecha);
     }
