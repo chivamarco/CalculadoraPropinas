@@ -22,6 +22,7 @@ public class Lista extends Fragment {
 
     public Lista() {
         // Required empty public constructor
+        //created changes
     }
 
 
