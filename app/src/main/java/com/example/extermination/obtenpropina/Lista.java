@@ -17,7 +17,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class Lista extends Fragment {
-    public static ArrayList<String> data;
+    public static ArrayList<String> data =  new ArrayList<>();
     public static  ArrayAdapter<String> adapter;
 
     public Lista() {
@@ -29,7 +29,6 @@ public class Lista extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_lista, container, false);
-        data = new ArrayList<>();
         //data.add("test");
          adapter = new ArrayAdapter<String>(
                 getContext(),
@@ -37,6 +36,7 @@ public class Lista extends Fragment {
                 data);
         ListView listvw =  (ListView) view.findViewById(R.id.listview);
         listvw.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
         // Inflate the layout for this fragment
         return view;
     }
